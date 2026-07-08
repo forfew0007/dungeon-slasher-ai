@@ -1,4 +1,4 @@
-name: Dungeon Slasher AI
+name: Dungeon Slasher AI - Fetch Data
 
 on:
   workflow_dispatch:
@@ -16,11 +16,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Install Playwright browser
-        run: npx playwright install --with-deps chromium
-
-      - name: Run AI
+      - name: Fetch and combine game data
         run: node index.js
+
+      - name: Upload combined data as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: game-data
+          path: game-data.json
