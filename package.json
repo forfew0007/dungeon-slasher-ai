@@ -1,7 +1,9 @@
 {
   "name": "dungeon-slasher-ai",
   "version": "1.0.0",
-  "dependencies": {
-    "playwright": "^1.55.0"
+  "description": "Fetches Dungeon Slasher game data and combines it into game-data.json for use as AI context.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
   }
 }
